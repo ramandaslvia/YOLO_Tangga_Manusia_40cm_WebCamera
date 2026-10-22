@@ -1,5 +1,3 @@
-<img width="1920" height="1920" alt="train_batch1" src="https://github.com/user-attachments/assets/1eb1e7fe-3663-4818-9955-dde58527da75" /><img width="1920" height="1920" alt="train_batch1" src="https://github.com/user-attachments/assets/96559d31-778f-40f9-8980-084f1e747961" />
-
 # Deteksi Tangga dan Manusia dengan YOLO26n
 
 Selvia Ramanda | NIM 4222411057 | Robotika Malam B | RET503 Computer Vision and Deep Learning
