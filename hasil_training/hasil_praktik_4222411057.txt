@@ -1,0 +1,17 @@
+==============================================================================
+  PRAKTIK TERPADU MINGGU 4-7 - RET503
+==============================================================================
+  NIM / Nama    : 4222411057 / Selvia Ramanda
+  Waktu         : 18-10-2026 19:28:33
+  Komputer/user : a30af1e24ce0 / root
+  Dataset       : /content/dataset_v1  (sidik jari label: D9B350CEE391)
+  Pengaturan    : model yolo26n, epochs 30, imgsz 416, batch 16
+==============================================================================
+  Eksperimen     Perubahan        mAP50  mAP50-95      P      R     ms   menit
+  E1_pretrained  -                0.946     0.767  0.954  0.911    4.6     2.2
+  E2_scratch     -                0.724     0.423  0.758  0.655    2.9     1.9
+  E3_tuning      imgsz=640        0.963     0.786  0.938  0.936    5.5     2.4
+==============================================================================
+  Model terpilih (mAP50-95 val tertinggi): E3_tuning
+  Hasil di data TEST (sekali saja)       : mAP50 0.958 | mAP50-95 0.799
+==============================================================================

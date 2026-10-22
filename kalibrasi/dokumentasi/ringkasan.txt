@@ -1,0 +1,29 @@
+HASIL KALIBRASI KAMERA
+======================
+Resolusi foto        : 640 x 480
+Pola papan           : 6 x 6 sudut dalam
+Jumlah foto          : 45
+Terdeteksi           : 41
+Gagal                : 4
+RMS reprojection     : 0.311 piksel
+
+Matriks kamera K:
+[[710.97   0.   305.31]
+ [  0.   737.22 219.88]
+ [  0.     0.     1.  ]]
+fx = 710.97   fy = 737.22
+cx = 305.31   cy = 219.88
+
+Koefisien distorsi (k1, k2, p1, p2, k3):
+0.01900, -0.17150, 0.00147, -0.00020, 0.00000
+
+Perubahan dari kode asli (calibration_utils.py):
+1. CHECKERBOARD diubah dari (6, 9) menjadi (7, 7)
+2. Detektor diganti ke findChessboardCornersSB
+3. k3 dikunci = 0 dengan flag CALIB_FIX_K3
+
+Foto yang gagal dideteksi:
+foto_14.jpg
+foto_15.jpg
+foto_42.jpg
+foto_43.jpg

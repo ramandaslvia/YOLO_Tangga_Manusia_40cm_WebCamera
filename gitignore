@@ -1,0 +1,14 @@
+# file sampah Python dan editor
+__pycache__/
+*.pyc
+.vscode/
+.ipynb_checkpoints/
+
+# bobot dasar yang diunduh otomatis oleh Ultralytics (tidak perlu disimpan)
+yolo26n.pt
+yolo11*.pt
+
+# hasil sementara
+runs/
+*.tmp
+Thumbs.db
