@@ -23,7 +23,7 @@ dengan repo lama.
 
 **Lingkungan pengujian:** Google Colab, Tesla T4, Ultralytics 8.4.182
 
-### 1. Perbandingan Hasil Eksperimen
+### Perbandingan Hasil Eksperimen
 
 | Eksperimen | Perubahan | mAP50 (val) | mAP50-95 (val) |
 |---|---|---:|---:|
@@ -37,31 +37,48 @@ Pada data test yang digunakan satu kali, E3 memperoleh mAP50 sebesar 0.958 dan m
 
 Selisih performa E3 dan E1 relatif kecil. Karena setiap eksperimen hanya dilatih satu kali, hasil ini belum cukup untuk memastikan peningkatan yang konsisten.
 
-### 2. Visualisasi Dataset
+### Visualisasi Dataset
 
 Gambar berikut digunakan untuk mendokumentasikan distribusi label dan contoh data training.
 
-#### Distribusi Label Dataset
+### 1. Dataset Visualization
 
-![Distribusi label dataset](hasil_training/hasil_praktik/E3_tuning/labels.jpg)
+#### Label Distribution
+![Dataset Labels](hasil_training/hasil_praktik/E3_tuning/labels.jpg)
 
-#### Contoh Batch Training
+### 2. Training Visualization
 
-![Training batch 0](hasil_training/hasil_praktik/E3_tuning/train_batch0.jpg)
+#### Training Batch 0
+![Training Batch 0](hasil_training/hasil_praktik/E3_tuning/train_batch0.jpg)
 
-![Training batch 1](hasil_training/hasil_praktik/E3_tuning/train_batch1.jpg)
+#### Training Batch 1
+![Training Batch 1](hasil_training/hasil_praktik/E3_tuning/train_batch1.jpg)
 
-![Training batch 2](hasil_training/hasil_praktik/E3_tuning/train_batch2.jpg)
+#### Training Batch 2
+![Training Batch 2](hasil_training/hasil_praktik/E3_tuning/train_batch2.jpg)
 
-### 3. Evaluasi Model
+#### Training Results
+![Training Results](hasil_training/hasil_praktik/E3_tuning/results.png)
+
+### 3. Model Evaluation
 
 #### Confusion Matrix
-
 ![Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix.png)
 
 #### Normalized Confusion Matrix
-
 ![Normalized Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix_normalized.png)
+
+#### Precision-Recall Curve
+![Precision Recall Curve](hasil_training/hasil_praktik/E3_tuning/BoxPR_curve.png)
+
+#### F1 Curve
+![F1 Curve](hasil_training/hasil_praktik/E3_tuning/BoxF1_curve.png)
+
+#### Precision Curve
+![Precision Curve](hasil_training/hasil_praktik/E3_tuning/BoxP_curve.png)
+
+#### Recall Curve
+![Recall Curve](hasil_training/hasil_praktik/E3_tuning/BoxR_curve.png)
 
 ### 4. Evaluasi Deteksi Status Terhalang
 
