@@ -47,26 +47,21 @@ Gambar berikut digunakan untuk mendokumentasikan distribusi label dan contoh dat
 
 #### Contoh Batch Training
 
-![Training batch 0](<img width="1920" height="1920" alt="train_batch0" src="https://github.com/user-attachments/assets/56ef9c3d-586c-458d-876f-01e1b95ec627" />
-)
+![Training batch 0](hasil_training/hasil_praktik/E3_tuning/train_batch0.jpg)
 
-![Training batch 1](<img width="1920" height="1920" alt="train_batch1" src="https://github.com/user-attachments/assets/23d8b805-672a-4fb4-8c37-525f709f64eb" />
-)
+![Training batch 1](hasil_training/hasil_praktik/E3_tuning/train_batch1.jpg)
 
-![Training batch 2](<img width="1920" height="1920" alt="train_batch2" src="https://github.com/user-attachments/assets/a3111ab8-1cb1-4d73-91db-9eb99de08eae" />
-)
+![Training batch 2](hasil_training/hasil_praktik/E3_tuning/train_batch2.jpg)
 
 ### 3. Evaluasi Model
 
 #### Confusion Matrix
 
-![Confusion Matrix](<img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/d45e6676-9f47-4845-be70-2d55e3dcfc64" />
-)
+![Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix.jpg)
 
 #### Normalized Confusion Matrix
 
-![Normalized Confusion Matrix](<img width="3000" height="2250" alt="confusion_matrix_normalized" src="https://github.com/user-attachments/assets/8f27b317-7bc6-4c89-802b-3490907dbbd6" />
-)
+![Normalized Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix_normalized.jpg)
 
 ### 4. Evaluasi Deteksi Status Terhalang
 
