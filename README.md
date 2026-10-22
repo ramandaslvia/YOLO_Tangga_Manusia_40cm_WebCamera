@@ -57,11 +57,11 @@ Gambar berikut digunakan untuk mendokumentasikan distribusi label dan contoh dat
 
 #### Confusion Matrix
 
-![Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix.jpg)
+![Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix.png)
 
 #### Normalized Confusion Matrix
 
-![Normalized Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix_normalized.jpg)
+![Normalized Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix_normalized.png)
 
 ### 4. Evaluasi Deteksi Status Terhalang
 
