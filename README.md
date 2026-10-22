@@ -63,10 +63,10 @@ Gambar berikut digunakan untuk mendokumentasikan distribusi label dan contoh dat
 ### 3. Model Evaluation
 
 #### Confusion Matrix
-![Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix.png)
+![Confusion Matrix](hasil_training/hasil_praktik/E3_cm_conf025/confusion_matrix.png)
 
 #### Normalized Confusion Matrix
-![Normalized Confusion Matrix](hasil_training/hasil_praktik/E3_tuning/confusion_matrix_normalized.png)
+![Normalized Confusion Matrix](hasil_training/hasil_praktik/E3_cm_conf025/confusion_matrix_normalized.png)
 
 #### Precision-Recall Curve
 ![Precision Recall Curve](hasil_training/hasil_praktik/E3_tuning/BoxPR_curve.png)
