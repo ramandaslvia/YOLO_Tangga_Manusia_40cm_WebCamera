@@ -1,3 +1,5 @@
+<img width="1920" height="1920" alt="train_batch1" src="https://github.com/user-attachments/assets/1eb1e7fe-3663-4818-9955-dde58527da75" /><img width="1920" height="1920" alt="train_batch1" src="https://github.com/user-attachments/assets/96559d31-778f-40f9-8980-084f1e747961" />
+
 # Deteksi Tangga dan Manusia dengan YOLO26n
 
 Selvia Ramanda | NIM 4222411057 | Robotika Malam B | RET503 Computer Vision and Deep Learning
@@ -19,23 +21,77 @@ dengan repo lama.
   jadi koreksi (undistort) tidak dipakai.
 - Pelabelan: Roboflow. Aturan: kotak tangga mencakup seluruh tangga termasuk bagian yang tertutup orang.
 
-## Hasil (Colab, Tesla T4, Ultralytics 8.4.182)
+## Hasil Eksperimen YOLO
+
+**Lingkungan pengujian:** Google Colab, Tesla T4, Ultralytics 8.4.182
+
+### 1. Perbandingan Hasil Eksperimen
 
 | Eksperimen | Perubahan | mAP50 (val) | mAP50-95 (val) |
-|---|---|---|---|
-| E1 pretrained | Pengaturan dasar (`imgsz=416`) | 0,946 | 0,767 |
-| E2 scratch | Tanpa bobot pretrained | 0,724 | 0,423 |
-| E3 tuning | `imgsz=640` | 0,963 | 0,786 |
+|---|---|---:|---:|
+| E1 - Pretrained | Pengaturan dasar (`imgsz=416`) | 0.946 | 0.767 |
+| E2 - Scratch | Tanpa bobot pretrained | 0.724 | 0.423 |
+| E3 - Tuning | `imgsz=640` | 0.963 | 0.786 |
 
-Model terpilih: E3 (mAP50-95 val tertinggi). Pada data test (dipakai sekali): mAP50 0,958 dan mAP50-95 0,799.
-Selisih E3 dan E1 kecil dan berasal dari satu kali latih, jadi belum bisa disebut perbaikan pasti.
+**Model terpilih:** E3, karena memperoleh nilai mAP50-95 validasi tertinggi.
 
-Status terhalang (acuan dari kotak label, tebakan dari kotak model, `conf=0.4`):
+Pada data test yang digunakan satu kali, E3 memperoleh mAP50 sebesar 0.958 dan mAP50-95 sebesar 0.799.
 
-- Val, ambang tumpang tindih 0,3: TP 12, FP 5, FN 0, TN 55 (presisi 0,706, recall 1,000).
-- Test, ambang 0,3: TP 4, FP 0, FN 0, TN 33 (hanya 4 foto terhalang, jangan dijadikan klaim kuat).
+Selisih performa E3 dan E1 relatif kecil. Karena setiap eksperimen hanya dilatih satu kali, hasil ini belum cukup untuk memastikan peningkatan yang konsisten.
 
-Hasil uji langsung dengan webcam: (isi setelah uji langsung).
+### 2. Visualisasi Dataset
+
+Gambar berikut digunakan untuk mendokumentasikan distribusi label dan contoh data training.
+
+#### Distribusi Label Dataset
+
+![Distribusi label dataset](<img width="1600" height="1600" alt="labels" src="https://github.com/user-attachments/assets/9059269d-ea9e-40d5-8d05-f34ae53fa8d4" />
+)
+
+#### Contoh Batch Training
+
+![Training batch 0](<img width="1920" height="1920" alt="train_batch0" src="https://github.com/user-attachments/assets/56ef9c3d-586c-458d-876f-01e1b95ec627" />
+)
+
+![Training batch 1](<img width="1920" height="1920" alt="train_batch1" src="https://github.com/user-attachments/assets/23d8b805-672a-4fb4-8c37-525f709f64eb" />
+)
+
+![Training batch 2](<img width="1920" height="1920" alt="train_batch2" src="https://github.com/user-attachments/assets/a3111ab8-1cb1-4d73-91db-9eb99de08eae" />
+)
+
+### 3. Evaluasi Model
+
+#### Confusion Matrix
+
+![Confusion Matrix](<img width="3000" height="2250" alt="confusion_matrix" src="https://github.com/user-attachments/assets/d45e6676-9f47-4845-be70-2d55e3dcfc64" />
+)
+
+#### Normalized Confusion Matrix
+
+![Normalized Confusion Matrix](<img width="3000" height="2250" alt="confusion_matrix_normalized" src="https://github.com/user-attachments/assets/8f27b317-7bc6-4c89-802b-3490907dbbd6" />
+)
+
+### 4. Evaluasi Deteksi Status Terhalang
+
+Acuan status terhalang ditentukan berdasarkan kotak label, sedangkan prediksi model ditentukan berdasarkan kotak deteksi dengan `conf=0.4`.
+
+| Dataset | TP | FP | FN | TN | Presisi | Recall |
+|---|---:|---:|---:|---:|---:|---:|
+| Validasi | 12 | 5 | 0 | 55 | 0.706 | 1.000 |
+| Test | 4 | 0 | 0 | 33 | 1.000 | 1.000 |
+
+Ambang tumpang tindih (IoU) yang digunakan adalah 0.3.
+
+**Catatan:** Hasil test hanya mencakup empat foto terhalang. Oleh karena itu, nilai presisi dan recall pada test belum cukup untuk dijadikan klaim performa yang kuat.
+
+## 🎥 Video Demonstrasi Robot
+
+Klik video berikut untuk melihat demonstrasi robot.
+
+**Hasil uji langsung dengan webcam:**
+
+[▶️ Tonton Video Demonstrasi](https://youtu.be/Z78DmsSWWf0)
+
 
 ## Keterbatasan
 
