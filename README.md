@@ -43,7 +43,7 @@ Gambar berikut digunakan untuk mendokumentasikan distribusi label dan contoh dat
 
 #### Distribusi Label Dataset
 
-![Distribusi label dataset](hasil_praktik/E3_tuning/weights/labels.jpg)
+![Distribusi label dataset](hasil_training/hasil_praktik/E3_tuning/labels.jpg)
 
 #### Contoh Batch Training
 
